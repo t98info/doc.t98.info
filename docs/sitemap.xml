@@ -3,16 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://doc.t98.info/about/</loc>
-    <lastmod>2020-06-21T12:53:33+09:00</lastmod>
+    <loc>https://doc.t98.info/categories/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/tags/hello/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/categories/hugo/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/post/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/tags/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/tags/world/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/5661384/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/</loc>
+    <lastmod>2020-06-21T13:56:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/about/</loc>
+    <lastmod>2020-06-21T12:53:33+09:00</lastmod>
   </url>
   
 </urlset>
