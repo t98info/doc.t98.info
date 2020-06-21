@@ -2,9 +2,7 @@
 
 {{ $homepage := "Home" }}
 {{ with .Site.Menus.nav }}
-  {{ range first 1 . }}
-    {{ $homepage = .Name }}
-  {{ end }}
+  {{ $homepage = "総合インフォ" }}
 {{ end }}
 <h1>{{ $homepage }}</h1>
 
