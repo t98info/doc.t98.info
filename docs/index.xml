@@ -6,19 +6,10 @@
     <description>Recent content on ほむりんルーム総合インフォ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 21 Jun 2020 13:56:46 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 Feb 2019 12:21:00 +0900</lastBuildDate>
     
 	<atom:link href="https://doc.t98.info/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>は?</title>
-      <link>https://doc.t98.info/5661384/</link>
-      <pubDate>Sun, 21 Jun 2020 13:56:46 +0900</pubDate>
-      
-      <guid>https://doc.t98.info/5661384/</guid>
-      <description>test dayo=.!!??a</description>
-    </item>
     
     <item>
       <title>このサイトについて</title>
@@ -27,6 +18,15 @@
       
       <guid>https://doc.t98.info/about/</guid>
       <description>当サイトのご利用にあたっては、以下の内容をご確認いただき、ご承諾いただいたものといたします。 なお、このご利用条件を予告なく変更することがあり</description>
+    </item>
+    
+    <item>
+      <title>ほむりんbot サービス終了のお知らせ</title>
+      <link>https://doc.t98.info/5661384/</link>
+      <pubDate>Sun, 03 Feb 2019 12:21:00 +0900</pubDate>
+      
+      <guid>https://doc.t98.info/5661384/</guid>
+      <description>いつもほむりんbotをご利用ありがとうございます。 システム老朽化に伴い、これ以上のサービス継続が困難になったため、誠に勝手ながら、ほむりんb</description>
     </item>
     
   </channel>
