@@ -12,7 +12,7 @@ subtitle = "サイトのお知らせを掲載いたします。"
   post = "/:filename/"
 
 [params]
-  description = "Some description"
+  description = "サイトのお知らせを掲載いたします。"
   contentBackgroundColor = "#fff"
   contentTextColor = "#212529"
   contentLinkColor = "#007bff"
@@ -24,9 +24,9 @@ subtitle = "サイトのお知らせを掲載いたします。"
   customDateFormat = "Jan 2, 2006"
   customCodeStyle = true
   customBlockquoteStyle = true
-  showPostSummary = false
-  googleAnalytics = "UA-123456789-1"
-  cookieConsent = true
+  showPostSummary = true
+  googleAnalytics = ""
+  cookieConsent = false
   includeBootstrapJs = false
   faviconSafariPinnedTabColor = "#5bbad5"
   faviconMsApplicationTileColor = "#da532c"
@@ -34,7 +34,7 @@ subtitle = "サイトのお知らせを掲載いたします。"
 
 [menu]
   [[menu.nav]]
-  name = "Posts"
+  name = "総合インフォ"
   url = "/"
   weight = 1
   [[menu.nav]]
