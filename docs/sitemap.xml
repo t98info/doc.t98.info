@@ -3,38 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doc.t98.info/tags/c98/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/c98-002/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doc.t98.info/categories/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/post/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://doc.t98.info/021601/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/tags/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://doc.t98.info/categories/%E3%81%BB%E3%82%80%E3%82%8A%E3%82%93%E3%83%AB%E3%83%BC%E3%83%A0/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/</loc>
-    <lastmod>2020-06-21T16:36:10+09:00</lastmod>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/tags/%E3%82%B3%E3%83%9F%E3%82%B1/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/tags/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/categories/%E8%A7%A3%E6%95%A3%E6%8E%B2%E7%A4%BA%E6%9D%BF/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -43,12 +53,32 @@
   </url>
   
   <url>
+    <loc>https://doc.t98.info/c98-001/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/20021601/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/categories/%E3%81%BB%E3%82%80%E3%82%8A%E3%82%93%E3%83%AB%E3%83%BC%E3%83%A0/</loc>
+    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doc.t98.info/categories/%E3%81%BB%E3%82%80%E3%82%8A%E3%82%93bot/</loc>
     <lastmod>2019-02-03T12:21:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://doc.t98.info/5661384/</loc>
+    <loc>https://doc.t98.info/end-homrin-bot/</loc>
     <lastmod>2019-02-03T12:21:00+09:00</lastmod>
   </url>
   
