@@ -10,5 +10,14 @@
 	<atom:link href="https://doc.t98.info/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>About</title>
+      <link>https://doc.t98.info/about/</link>
+      <pubDate>Sun, 21 Jun 2020 13:15:56 +0900</pubDate>
+      
+      <guid>https://doc.t98.info/about/</guid>
+      <description>test Hello!! </description>
+    </item>
+    
   </channel>
 </rss>
