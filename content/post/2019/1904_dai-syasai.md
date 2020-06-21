@@ -1,10 +1,10 @@
 ---
-title: "1904_dai syasai"
+title: "2019年度 大型連休 放送予定"
 date: 2020-06-21T17:45:10+09:00
 publishdate: 2019-04-22
 lastmod: 2020-06-21
-draft: true
-tags: ["企画枠","車載"]
+draft: false
+tags: ["放送関連お知らせ"]
 categories: ["解散掲示板"]
 ---
 
