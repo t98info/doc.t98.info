@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://doc.t98.info/policy/</loc>
+    <lastmod>2020-07-21T00:07:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/rule/</loc>
+    <lastmod>2020-07-21T00:02:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/del-guide/</loc>
+    <lastmod>2020-07-20T23:58:20+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://doc.t98.info/404/</loc>
     <lastmod>2020-06-21T18:08:55+09:00</lastmod>
   </url>
