@@ -17,7 +17,7 @@ categories: ["解散掲示板"]
 
 [![大車載2019 詳細タイムテーブル](https://t98info.minibird.jp/i/tokaido2019-timetable1.jpg "大車載2019 詳細タイムテーブル")](https://t98info.minibird.jp/i/tokaido2019-timetable1.jpg)
 
-[![大車載2019 概要](https://t98info.minibird.jp/i/tokaido2019-gaiyo1.jpg "大車載2019 概要")](hhttps://t98info.minibird.jp/i/tokaido2019-gaiyo1.jpg)
+[![大車載2019 概要](https://t98info.minibird.jp/i/tokaido2019-gaiyo1.jpg "大車載2019 概要")](https://t98info.minibird.jp/i/tokaido2019-gaiyo1.jpg)
 
 ## 基本ルール
 
