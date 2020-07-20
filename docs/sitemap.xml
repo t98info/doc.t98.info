@@ -29,22 +29,22 @@
   
   <url>
     <loc>https://doc.t98.info/categories/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/post/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/tags/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://doc.t98.info/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -54,7 +54,7 @@
   
   <url>
     <loc>https://doc.t98.info/categories/%E8%A7%A3%E6%95%A3%E6%8E%B2%E7%A4%BA%E6%9D%BF/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -94,7 +94,7 @@
   
   <url>
     <loc>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</loc>
-    <lastmod>2020-06-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -145,6 +145,16 @@
   <url>
     <loc>https://doc.t98.info/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</loc>
     <lastmod>2019-02-03T12:21:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/wcbbs-info20170607/</loc>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://doc.t98.info/wcbbs-info20170316/</loc>
+    <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
