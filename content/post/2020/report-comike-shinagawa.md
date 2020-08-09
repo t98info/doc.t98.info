@@ -83,13 +83,5 @@ categories: ["ブログ"]
 <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/terminal98/50179122507/in/photostream/" title="朝のつどい橋"><img src="https://live.staticflickr.com/65535/50179122507_684c17b3ee_c.jpg" width="800" height="369" alt="朝のつどい橋"></a>
 <a data-flickr-embed="true" data-footer="true" href="https://www.flickr.com/photos/terminal98/50178871446/in/photostream/" title="TFTビルとホテルトラスティ"><img src="https://live.staticflickr.com/65535/50178871446_7b4d0b1ecd_c.jpg" width="800" height="369" alt="TFTビルとホテルトラスティ"></a>
 
-## 参考
-
-- [冬コミの話 - 気刊びびび](http://moodly.bi3.jp/entry/2018/01/04/200531)
-
-
-## まとめ
-
-横浜方面からはA快特・快特
 
 <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">
