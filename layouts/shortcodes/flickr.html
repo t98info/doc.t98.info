@@ -1,0 +1,21 @@
+{{$api_key := "&api_key=[YOUR API KEY]"}}
+{{$user := or (.Get "user") "[YOUR USER NAME]"}}
+
+{{$api_url := "https://api.flickr.com/services/rest/?format=json&nojsoncallback=1"}}
+{{$size := (getJSON $api_url "&method=flickr.photos.getSizes" $api_key "&photo_id=" (.Get "id")).sizes.size}}
+
+{{$title := .Get "title"}}
+{{$width := .Get "width"}}
+{{$height:= .Get "height"}}
+
+<a data-flickr-embed="true"
+  {{ with .Get "header" }}data-header="true"{{end}}
+  {{ with .Get "footer" }}data-footer="true"{{end}}
+  {{ with .Get "slideshow" }}data-context="true"{{end}}
+  href="https://www.flickr.com/photos/{{$user}}/{{ .Get "id" }}/" {{ with $title }}title="{{.}}" {{end}} target="_blank">
+  {{range (first 1 (where $size "label" (or (.Get "size") "Medium")))}}
+    <img src="{{ .source }}" width="{{ or $width .width }}" height="{{ or $height .height }}"
+        {{ with $title }}alt="{{.}}"{{end}} class="flickr-embed">
+  {{end}}
+  </a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
