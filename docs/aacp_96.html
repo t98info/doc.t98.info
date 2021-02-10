@@ -2,7 +2,9 @@
 <html>
 <meta charset="utf-8">
 <h1>bgm</h1>
-<audio controls>
-    <source src="/aacp_96.m3u" type="audio/mpegURL" />
-</audio>
+<script src="https://raw.githubusercontent.com/opi/m3uStreamPlayer/master/m3uStreamPlayer.js"></script>
+<video id="video" controls loop autoplay width="640" 
+    data-playlist="/aacp_96.m3u">
+    </video>
+<script>m3uStreamPlayer.init({selector: '#video', debug: false});</script>
 </html>
