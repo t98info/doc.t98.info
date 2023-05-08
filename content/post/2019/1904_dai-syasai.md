@@ -1,14 +1,15 @@
 ---
-title: "2019年度 大型連休 放送予定"
+title: "【解散掲示板】2019年度 大型連休 放送予定"
 date: 2020-06-21T17:45:10+09:00
 publishdate: 2019-04-22
 lastmod: 2020-06-21
 draft: false
-tags: ["放送関連お知らせ"]
+tags: ["お知らせ", "放送"]
 categories: ["解散掲示板"]
 ---
 
 2019年度の大型連休における放送予定は以下の通りとなっております。  
+
 **クリックで拡大します**
 
 [![大車載2019 タイムテーブル](https://t98info.minibird.jp/i/tokaido2019-timetable4.png "大車載2019 タイムテーブル")](https://t98info.minibird.jp/i/tokaido2019-timetable4.png)

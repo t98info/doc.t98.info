@@ -5,7 +5,7 @@ publishdate: 2020-08-02
 lastmod: 2020-08-02
 draft: false
 tags: ["コミケ","C98"]
-categories: ["ブログ"]
+categories: ["コラム"]
 ---
 
 ![コミケで役立つ！？青物横丁→品川シーサイド 徒歩ルート検証](https://img.t98.info/up/s/2008091910434548.png)
