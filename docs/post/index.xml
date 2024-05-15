@@ -2,94 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ほむりんルーム総合インフォ</title>
-    <link>http://localhost:1313/post/</link>
+    <link>https://doc.t98.info/post/</link>
     <description>Recent content in Posts on ほむりんルーム総合インフォ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://doc.t98.info/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【解散掲示板】本放送終了後の各種サイトについて</title>
-      <link>http://localhost:1313/0118234101/</link>
+      <link>https://doc.t98.info/0118234101/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0118234101/</guid>
+      <guid>https://doc.t98.info/0118234101/</guid>
       <description>いつも解散をご利用ありがとうございます。 ならはし氏による放送は終了しましたが、解散掲示板をはじめとする各種サイトは、これからも通常通り閲覧で</description>
     </item>
     <item>
       <title>C99A ジャンルコード・配置 まとめ</title>
-      <link>http://localhost:1313/c99-001/</link>
+      <link>https://doc.t98.info/c99-001/</link>
       <pubDate>Fri, 31 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/c99-001/</guid>
+      <guid>https://doc.t98.info/c99-001/</guid>
       <description>【準備会】コミックマーケット 99(新日程)ジャンルコード一覧</description>
     </item>
     <item>
       <title>コミケで役立つ！？青物横丁→品川シーサイド 徒歩ルート検証</title>
-      <link>http://localhost:1313/report-comike-shinagawa/</link>
+      <link>https://doc.t98.info/report-comike-shinagawa/</link>
       <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/report-comike-shinagawa/</guid>
+      <guid>https://doc.t98.info/report-comike-shinagawa/</guid>
       <description>横浜方面から東京ビッグサイト・有明方面へのアクセス方法で、早朝でも使えるショートカット経路があると話題になっていたので、実際に行ってみました</description>
     </item>
     <item>
       <title>【解散掲示板】2019年度 大型連休 放送予定</title>
-      <link>http://localhost:1313/1904_dai-syasai/</link>
+      <link>https://doc.t98.info/1904_dai-syasai/</link>
       <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1904_dai-syasai/</guid>
+      <guid>https://doc.t98.info/1904_dai-syasai/</guid>
       <description>2019年度の大型連休における放送予定は以下の通りとなっております。 クリックで拡大します 基本ルール 1運雄交運法及び安令運軒現範を運守レ、高知</description>
     </item>
     <item>
       <title>C98中止まとめ</title>
-      <link>http://localhost:1313/c98-002/</link>
+      <link>https://doc.t98.info/c98-002/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/c98-002/</guid>
+      <guid>https://doc.t98.info/c98-002/</guid>
       <description>※クリックで拡大します コミケ献血応援イベントは2020年6月30日まで 【準備会】コミックマーケット98中止に伴う対応の現状について 2020年</description>
     </item>
     <item>
       <title>C98 ジャンルコード・配置 まとめ</title>
-      <link>http://localhost:1313/c98-001/</link>
+      <link>https://doc.t98.info/c98-001/</link>
       <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/c98-001/</guid>
+      <guid>https://doc.t98.info/c98-001/</guid>
       <description>【準備会】コミックマーケット98ジャンルコード一覧</description>
     </item>
     <item>
       <title>【インフォ】SNS運用終了のお知らせ</title>
-      <link>http://localhost:1313/20021601/</link>
+      <link>https://doc.t98.info/20021601/</link>
       <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/20021601/</guid>
+      <guid>https://doc.t98.info/20021601/</guid>
       <description>いつもご利用ありがとうございます。 「ほむりん総合インフォ」のTwitterアカウントを、本日 16日を持ちまして閉鎖しましたので、お知らせいた</description>
     </item>
     <item>
       <title>C97 ジャンルコード・配置まとめ</title>
-      <link>http://localhost:1313/c97-001/</link>
+      <link>https://doc.t98.info/c97-001/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/c97-001/</guid>
+      <guid>https://doc.t98.info/c97-001/</guid>
       <description>【準備会】コミックマーケット97ジャンルコード一覧</description>
     </item>
     <item>
       <title>ほむりんbot サービス終了のお知らせ</title>
-      <link>http://localhost:1313/end-homrin-bot/</link>
+      <link>https://doc.t98.info/end-homrin-bot/</link>
       <pubDate>Sun, 03 Feb 2019 12:21:00 +0900</pubDate>
-      <guid>http://localhost:1313/end-homrin-bot/</guid>
+      <guid>https://doc.t98.info/end-homrin-bot/</guid>
       <description>いつもほむりんbotをご利用ありがとうございます。 システム老朽化に伴い、これ以上のサービス継続が困難になったため、誠に勝手ながら、ほむりんb</description>
     </item>
     <item>
       <title>【解散掲示板】プッシュ通知購読ボタン廃止のお知らせ</title>
-      <link>http://localhost:1313/wcbbs-info20180221/</link>
+      <link>https://doc.t98.info/wcbbs-info20180221/</link>
       <pubDate>Wed, 21 Feb 2018 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/wcbbs-info20180221/</guid>
+      <guid>https://doc.t98.info/wcbbs-info20180221/</guid>
       <description>解散をご利用ありがとうございます。 解散掲示板トップページに設置していました、黄色のボタンは、読み込みに支障をきたすため、廃止しました。 今後、</description>
     </item>
     <item>
       <title>【解散掲示板】不適切な画像がアップロードされた件について</title>
-      <link>http://localhost:1313/wcbbs-info20170607/</link>
+      <link>https://doc.t98.info/wcbbs-info20170607/</link>
       <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/wcbbs-info20170607/</guid>
+      <guid>https://doc.t98.info/wcbbs-info20170607/</guid>
       <description>不適切な画像がアップロードされた件について、以下の通り対処したのでお知らせします。 今回の事例 解散掲示板のレス番号119、120、128、12</description>
     </item>
     <item>
       <title>【解散掲示板】ご意見への回答</title>
-      <link>http://localhost:1313/wcbbs-info20170316/</link>
+      <link>https://doc.t98.info/wcbbs-info20170316/</link>
       <pubDate>Thu, 16 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/wcbbs-info20170316/</guid>
+      <guid>https://doc.t98.info/wcbbs-info20170316/</guid>
       <description>いつも解散をご利用ありがとうございます。 掲示板にお寄せいただいたご意見についてお答えいたします。 広告掲載につきまして 当掲示板及びそれに付随す</description>
     </item>
   </channel>

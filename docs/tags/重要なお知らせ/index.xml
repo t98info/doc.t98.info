@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>重要なお知らせ on ほむりんルーム総合インフォ</title>
-    <link>http://localhost:1313/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+    <link>https://doc.t98.info/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
     <description>Recent content in 重要なお知らせ on ほむりんルーム総合インフォ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 03 Feb 2019 12:21:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://doc.t98.info/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ほむりんbot サービス終了のお知らせ</title>
-      <link>http://localhost:1313/end-homrin-bot/</link>
+      <link>https://doc.t98.info/end-homrin-bot/</link>
       <pubDate>Sun, 03 Feb 2019 12:21:00 +0900</pubDate>
-      <guid>http://localhost:1313/end-homrin-bot/</guid>
+      <guid>https://doc.t98.info/end-homrin-bot/</guid>
       <description>いつもほむりんbotをご利用ありがとうございます。 システム老朽化に伴い、これ以上のサービス継続が困難になったため、誠に勝手ながら、ほむりんb</description>
     </item>
   </channel>

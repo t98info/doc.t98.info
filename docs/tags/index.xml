@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ほむりんルーム総合インフォ</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://doc.t98.info/tags/</link>
     <description>Recent content in Tags on ほむりんルーム総合インフォ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://doc.t98.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お知らせ</title>
-      <link>http://localhost:1313/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+      <link>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
+      <guid>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
       <description></description>
     </item>
     <item>
       <title>放送</title>
-      <link>http://localhost:1313/tags/%E6%94%BE%E9%80%81/</link>
+      <link>https://doc.t98.info/tags/%E6%94%BE%E9%80%81/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E6%94%BE%E9%80%81/</guid>
+      <guid>https://doc.t98.info/tags/%E6%94%BE%E9%80%81/</guid>
       <description></description>
     </item>
     <item>
       <title>C98</title>
-      <link>http://localhost:1313/tags/c98/</link>
+      <link>https://doc.t98.info/tags/c98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/c98/</guid>
+      <guid>https://doc.t98.info/tags/c98/</guid>
       <description></description>
     </item>
     <item>
       <title>コミケ</title>
-      <link>http://localhost:1313/tags/%E3%82%B3%E3%83%9F%E3%82%B1/</link>
+      <link>https://doc.t98.info/tags/%E3%82%B3%E3%83%9F%E3%82%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%B3%E3%83%9F%E3%82%B1/</guid>
+      <guid>https://doc.t98.info/tags/%E3%82%B3%E3%83%9F%E3%82%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>ジャンルコード</title>
-      <link>http://localhost:1313/tags/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</link>
+      <link>https://doc.t98.info/tags/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</guid>
+      <guid>https://doc.t98.info/tags/%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</guid>
       <description></description>
     </item>
     <item>
       <title>C97</title>
-      <link>http://localhost:1313/tags/c97/</link>
+      <link>https://doc.t98.info/tags/c97/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/c97/</guid>
+      <guid>https://doc.t98.info/tags/c97/</guid>
       <description></description>
     </item>
     <item>
       <title>重要なお知らせ</title>
-      <link>http://localhost:1313/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+      <link>https://doc.t98.info/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
+      <guid>https://doc.t98.info/tags/%E9%87%8D%E8%A6%81%E3%81%AA%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
       <description></description>
     </item>
   </channel>

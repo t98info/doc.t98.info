@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C97 on ほむりんルーム総合インフォ</title>
-    <link>http://localhost:1313/tags/c97/</link>
+    <link>https://doc.t98.info/tags/c97/</link>
     <description>Recent content in C97 on ほむりんルーム総合インフォ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 21 Jun 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/c97/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://doc.t98.info/tags/c97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C97 ジャンルコード・配置まとめ</title>
-      <link>http://localhost:1313/c97-001/</link>
+      <link>https://doc.t98.info/c97-001/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/c97-001/</guid>
+      <guid>https://doc.t98.info/c97-001/</guid>
       <description>【準備会】コミックマーケット97ジャンルコード一覧</description>
     </item>
   </channel>

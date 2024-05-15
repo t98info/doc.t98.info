@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>放送 on ほむりんルーム総合インフォ</title>
-    <link>http://localhost:1313/tags/%E6%94%BE%E9%80%81/</link>
+    <link>https://doc.t98.info/tags/%E6%94%BE%E9%80%81/</link>
     <description>Recent content in 放送 on ほむりんルーム総合インフォ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E6%94%BE%E9%80%81/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://doc.t98.info/tags/%E6%94%BE%E9%80%81/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【解散掲示板】本放送終了後の各種サイトについて</title>
-      <link>http://localhost:1313/0118234101/</link>
+      <link>https://doc.t98.info/0118234101/</link>
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/0118234101/</guid>
+      <guid>https://doc.t98.info/0118234101/</guid>
       <description>いつも解散をご利用ありがとうございます。 ならはし氏による放送は終了しましたが、解散掲示板をはじめとする各種サイトは、これからも通常通り閲覧で</description>
     </item>
     <item>
       <title>【解散掲示板】2019年度 大型連休 放送予定</title>
-      <link>http://localhost:1313/1904_dai-syasai/</link>
+      <link>https://doc.t98.info/1904_dai-syasai/</link>
       <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/1904_dai-syasai/</guid>
+      <guid>https://doc.t98.info/1904_dai-syasai/</guid>
       <description>2019年度の大型連休における放送予定は以下の通りとなっております。 クリックで拡大します 基本ルール 1運雄交運法及び安令運軒現範を運守レ、高知</description>
     </item>
   </channel>
