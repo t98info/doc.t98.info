@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://doc.t98.info/</loc>
+    <lastmod>2022-07-09T03:09:16+09:00</lastmod>
+  </url><url>
     <loc>https://doc.t98.info/about-cos-camera/</loc>
     <lastmod>2022-07-09T03:09:16+09:00</lastmod>
   </url><url>
@@ -18,9 +21,6 @@
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://doc.t98.info/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://doc.t98.info/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://doc.t98.info/tags/%E6%94%BE%E9%80%81/</loc>
