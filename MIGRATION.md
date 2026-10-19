@@ -112,7 +112,7 @@ PoCの現行ファイルは次の通り。
 | `mdx-components.js` / `app/styles.css` | MDX component mappingとスタイル | raw HTML、画像、コードブロック等が既存本文で動くか確認。 |
 | `content/_meta.js` | Nextra navigation metadata | archiveをナビゲーションで隠しつつ一覧ページ等から到達可能にする。 |
 | `package.json` / lockfile | Pagefindを含む依存・postbuildの参考 | バージョン、静的出力を検索対象にするPagefindの入力パスと出力パスを確認。 |
-| `.github/workflows/nextjs.yml` | GitHub Actionsのbuild/deploy例 | `t98info/doc.t98.info`の配信元・公開方法に合わせて作り直す。現状はGitHub Pages向け設定。 |
+| `DEPLOYMENT.md` / `.nvmrc` | Cloudflare Pages Git連携、build/output設定、Node.js version | Cloudflareアカウント側のPages project・custom domain設定が必要。 |
 
 ## Phase 2: 作業ブランチ
 
@@ -132,22 +132,23 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 
 ## Phase 3〜10: Nextra移行実装と検証
 
-`migrate/nextra`上で、Nextra静的サイトとGitHub Pages向けGitHub Actions workflowを実装した。Hugoの原本は削除せず`hugo-legacy/content/`へ移し、元の`config.toml`、layouts、theme gitlink等も検証完了まで残している。
+`migrate/nextra`上で、Nextra静的サイトをCloudflare Pages向けに整えた。Hugoの原本は削除せず`hugo-legacy/content/`へ移し、元の`config.toml`、layouts、theme gitlink等も検証完了まで残している。
 
-- Next.js 15 / Nextra 4 / React 19のPoC構成を移植し、`output: 'export'`と`trailingSlash: true`を設定。`public/CNAME`は`doc.t98.info`を維持する。
+- Next.js 15 / Nextra 4 / React 19のPoC構成を移植し、`output: 'export'`と`trailingSlash: true`を設定。Cloudflare Pagesのcustom domainはDashboardで`doc.t98.info`を紐付ける。
 - 14記事は旧slugのまま`content/<slug>.mdx`に置き、通常ナビゲーションから隠した。`/archive/`に年別一覧を作り、Pagefind対象には全記事を含めている。Nextraでは実ファイルをrootに置かないとslug routeを維持できないため、`content/archive/`には一覧ページだけを配置した。
 - 固定ページ、tags/categories一覧・各項目、`/post/`一覧、`/404/`を作成。`/021601/`と`/5661384/`は対応する現行記事HTMLをコピーする生成処理を追加した。`/kL5KtNRy7eWsoITdNA00DNbnF/`、`/aacp_96.html`、`/aacp_96.m3u`、各RSS XML、既存の静的ファイルも引き継いだ。古い`sitemap.xml`はNext.js生成物へ置き換える。
 - Hugoのtweet/YouTube shortcodeをMDX componentへ変換し、Flickr埋め込み用client component、C99 SVGパス、taxonomy URL、大文字小文字、メタデータを整えた。利用規約・ポリシー・削除ガイド等の本文は校正せず移行した。
-- 日本語UI、metadata/canonical/OGP、`robots.txt`、`sitemap.xml`、Pagefind日本語index、`.nojekyll`を設定。ナビゲーションにはArchive、Tags、Categories、About、RSSを追加した。
-- `.github/workflows/nextjs.yml`は`master` pushと手動実行を契機にビルドし、GitHub Pages artifactをActionsからデプロイする。移行ブランチへのpushでは本番デプロイしない。
+- 日本語UI、metadata/canonical/OGP、`robots.txt`、`sitemap.xml`、Pagefind日本語indexを設定。ナビゲーションにはArchive、Tags、Categories、About、RSSを追加した。
+- Cloudflare PagesのGit連携を前提にし、Node.js 22を`.nvmrc`で指定。Build commandは`npm run build`、Build output directoryは`out`とする。`postbuild`でPagefindと旧URL aliasを生成するため、標準の`npx next build`ではなくnpm scriptを使う。
+- GitHub Pages専用workflow、`.nojekyll`、生成対象の`public/CNAME`は削除した。Cloudflare Pagesの設定手順とcustom domain切替手順は`DEPLOYMENT.md`に記録した。
 
-### GitHub Pagesの現状と切替
+### Cloudflare Pagesの現状と切替
 
-GitHubリポジトリのSettings → Pagesを読み取りで確認したところ、Sourceは「Deploy from a branch」、branchは「None」で、「GitHub Pages is currently disabled」と表示された。つまり現時点でこのリポジトリのGitHub Pagesは無効。`https://doc.t98.info/`には旧Hugoサイトが表示されているため、現在はGitHub Pages以外の経路で公開されている。正確な現行ホスティング事業者はまだ確認していない。
+GitHubリポジトリのSettings → Pagesを読み取りで確認したところ、Sourceは「Deploy from a branch」、branchは「None」で、「GitHub Pages is currently disabled」と表示された。`https://doc.t98.info/`には旧Hugoサイトが表示されているため、このリポジトリのGitHub Pagesでは公開していない。現行ホスティング先はCloudflare Pagesの可能性を前提にし、Cloudflareアカウント内のプロジェクト状態は未確認。
 
 Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`があるものの、これらだけでは実際にPagesで配信中とは言えない。さらに`deploy.sh`はHugo出力後に`public/`へ移動し、`master8`としてpushする手順で、`publishDir = "docs"`とも一致していない。
 
-新workflowはGitHub Pagesの公開元が **GitHub Actions** に設定されていることを前提とする。現在はPages自体が無効なので、workflowを`master`へ反映した後にSettings → Pages → Build and deployment → Sourceを「GitHub Actions」に変更し、Pages deploymentとcustom domainの状態を確認する必要がある。設定変更とmasterへの反映はこの作業では行っていない。
+Cloudflare Pagesの公式Next.js Static Export設定に合わせ、build commandは`npm run build`、出力先は`out/`とした。`npm run build`はpostbuildで検索indexとlegacy aliasも出力する。Node.js 22は`.nvmrc`に固定した。Cloudflare Pagesプロジェクトの作成・Git連携・custom domain設定はアカウント側で行う必要があるため、この作業では変更していない。
 
 ### 確認結果
 
@@ -159,9 +160,9 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 
 ### 残作業
 
-1. 現在の旧Hugo公開経路とDNS/custom domainの切替手順を確認する。GitHub Pagesは現在無効。
-2. 本番切替時にGitHub Settings → PagesのSourceをActionsへ変更し、`master`にworkflowが入った後のdeploymentとcustom domainを確認する。
-3. 移行ブランチをレビューし、承認後にmasterへ統合する。本作業ではmaster、公開設定、live deploymentを変更していない。
+1. Cloudflare Dashboardで既存PagesプロジェクトとGit連携状況を確認する。未作成なら`DEPLOYMENT.md`の値で作成する。
+2. 最初は`migrate/nextra`をpreview deploymentとして検証し、旧URLと検索を確認する。
+3. 本番切替時に`master`へ統合し、Cloudflare Pagesのproduction branchと`doc.t98.info` custom domain / DNSを設定する。本作業ではmaster、Cloudflare設定、live DNSを変更していない。
 
 ## 初期調査の未確定事項
 
@@ -169,6 +170,6 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 2. `docs/`内のHTMLと現在のMarkdownの差（draft記事、生成時期、ソース不在ページの特定）。
 3. submodule theme、Hugo生成設定、既存公開ワークフローと実際の本番配信経路。
 4. 内部リンク・外部リンク・画像参照を全ファイルから抽出し、移行後の検査一覧にする。
-5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とworkflowでCLI実行を確認した。
+5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とpostbuild scriptでCLI実行を確認した。
 
-本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesの設定確認は読み取りのみ実施し、Pages有効化、本番切替、masterへの統合は未実施。
+本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesの設定は無効と確認した。Cloudflare Pagesのアカウント設定、custom domain、本番切替、masterへの統合は未実施。
