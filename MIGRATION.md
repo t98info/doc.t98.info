@@ -152,11 +152,12 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 
 ### 確認結果
 
-- `npm ci`成功。PoC由来のReact 19と`@theguild/remark-mermaid`のReact 18 peer warning、npm auditの脆弱性件数が出たため、依存更新は別途判断が必要。
+- `npm ci`成功。PoC由来のReact 19と`@theguild/remark-mermaid`のReact 18 peer warningは残る。Next.jsを15.5.28へ更新し、DOMPurifyを3.4.17へ更新。安全な範囲の推移依存更新も適用した。
+- 更新後の`npm audit --omit=dev`は19件（High 6、Moderate 8、Low 5、Critical 0）。残りはNextraやNext.jsのメジャー更新が必要な項目を含むため、強制更新はしていない。GitHubのDependabot集計はpush直後も89件表示のままで、npm auditとは別に再確認が必要。
 - `npm run build`成功。Next.jsが50 routeを静的生成し、Pagefindが日本語indexに46ページ・1,772語を登録した。
 - Cloudflare Pages preview deployment `8324964` がclone・build・deployに成功。公開URLは<https://migrate-nextra.doc-t98-info.pages.dev/>。トップ、旧URL `/rule/`、検索語`C97`の結果をブラウザで確認した。
 - Nextraの右側目次、最終更新表示、テーマ選択を日本語化し、PoC既定の英語feedbackリンクを削除した。更新済みpreviewで日本語ラベル、feedback非表示、ライト/ダーク切替を確認した。
-- `master`のproduction deploymentが成功し、`https://doc.t98.info/`へNextra版が公開された。トップ、旧URL `/rule/`、Pagefindの`C97`検索を本番ドメインで確認した。
+- `master`のproduction deploymentが成功し、`https://doc.t98.info/`へNextra版が公開された。Hugo専用ビルドファイル削除後の`b3ec5ec`と、依存更新を含む`ff3ca8b`もCloudflare Pagesで成功した。トップ、旧URL `/rule/`、Pagefindの`C97`検索を最新本番ドメインで確認した。
 - 旧`docs/`にあるHTML 50件はすべて出力先に存在し、旧非HTML/XMLファイルもすべて存在することを照合した。新規のArchive routeを含め、出力HTML内のローカルhref/srcを検査し未解決参照は0件。
 - ブラウザでトップページ、Archive一覧とC97検索結果を確認。検索欄から記事・taxonomy・Archiveが検索できた。Nextraの標準テーマ切替（System / light / dark）を維持。
 - 視覚確認はCodex内ブラウザの狭い表示幅で行った。専用のPlaywright実行環境はなく、実機ブラウザでの複数幅・hydration console検査は未実施。
