@@ -154,14 +154,15 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 
 - `npm ci`成功。PoC由来のReact 19と`@theguild/remark-mermaid`のReact 18 peer warning、npm auditの脆弱性件数が出たため、依存更新は別途判断が必要。
 - `npm run build`成功。Next.jsが50 routeを静的生成し、Pagefindが日本語indexに46ページ・1,772語を登録した。
+- Cloudflare Pages preview deployment `027834d` がclone・build・deployに成功。公開URLは<https://migrate-nextra.doc-t98-info.pages.dev/>。トップ、旧URL `/rule/`、検索語`C97`の結果をブラウザで確認した。
 - 旧`docs/`にあるHTML 50件はすべて出力先に存在し、旧非HTML/XMLファイルもすべて存在することを照合した。新規のArchive routeを含め、出力HTML内のローカルhref/srcを検査し未解決参照は0件。
 - ブラウザでトップページ、Archive一覧とC97検索結果を確認。検索欄から記事・taxonomy・Archiveが検索できた。Nextraの標準テーマ切替（System / light / dark）を維持。
 - 視覚確認はCodex内ブラウザの狭い表示幅で行った。専用のPlaywright実行環境はなく、実機ブラウザでの複数幅・hydration console検査は未実施。
 
 ### 残作業
 
-1. `migrate/nextra`のCloudflare preview deploymentで旧URLと検索を確認する。
-2. previewを確認後、本番切替時に`master`へ統合する。現在のproduction branchは`master`のまま維持しており、custom domain/DNSも切り替えていない。
+1. preview上で旧URLと検索の追加確認を行う。
+2. preview確認後、本番切替時に`master`へ統合する。現在のproduction branchは`master`のまま維持しており、custom domain/DNSも切り替えていない。
 
 ## 初期調査の未確定事項
 
