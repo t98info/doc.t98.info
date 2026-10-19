@@ -12,9 +12,11 @@ GitHub Pages uses **GitHub Actions** as its source. The repository ruleset prote
 
 `doc.t98.info` is configured as the GitHub Pages custom domain. Cloudflare DNS now points the `doc` CNAME to `t98info.github.io` with proxying disabled, so GitHub Pages serves production traffic. The Pages certificate may take time to provision after the DNS change; check **Settings → Pages** for DNS and HTTPS status.
 
-The Cloudflare Pages project `doc-t98-info` remains available as a rollback target. Do not delete it until GitHub Pages HTTPS and the site's key routes have remained stable. The repository includes `public/CNAME`, which Next exports to `out/CNAME`.
+The Cloudflare Pages project `doc-t98-info` and its prior deployments remain available for rollback. Its Git connection is disconnected, its `pages.dev` hostnames are restricted by Cloudflare Access, and the retained `doc.t98.info` custom-domain association is inactive. The Pages project remains until the GitHub Pages site is considered stable. The repository includes `public/CNAME`, which Next exports to `out/CNAME`.
 
-If production needs to be rolled back before Cloudflare Pages is retired, restore the `doc` CNAME target to `doc-t98-info.pages.dev` and enable Cloudflare proxying.
+A rollback requires promoting a retained Cloudflare deployment, restoring the `doc` CNAME target to `doc-t98-info.pages.dev` with proxying enabled, and adjusting the Cloudflare Access restriction for the public hostname before opening the site to visitors. Check that the intended deployment is available before changing DNS.
+
+The unused `docs.t98.info` hostname has been retired: its DNS record and redirect rule were removed. The PoC repository `terminal98/docs.t98.info` is private and archived.
 
 ## Branch workflow
 

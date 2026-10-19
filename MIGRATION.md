@@ -5,6 +5,8 @@
 移行元: [t98info/doc.t98.info](https://github.com/t98info/doc.t98.info) (`master`, `175bcc47b821fc934d1eeffa44d2d8ffa2c0b6a4`)  
 UI・実装参照: [terminal98/docs.t98.info](https://github.com/terminal98/docs.t98.info) (`master`, `369045a086382925a8e01f6236e80213ecc8ee83`)
 
+> **最終状態（2026-10-19更新）:** 本番は GitHub Pages で配信中。Cloudflare Pages は初期の移行・配信先として使った履歴であり、現在の本番ホストではない。`docs.t98.info` の DNS レコードと転送ルールは削除済み。PoC リポジトリ `terminal98/docs.t98.info` は Private に変更してアーカイブ済み。
+
 ## Phase 1: 現状調査
 
 ### 調査範囲と確認できた構成
@@ -160,13 +162,14 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 - `master`のproduction deploymentが成功し、`https://doc.t98.info/`へNextra版が公開された。Hugo専用ビルドファイル削除後の`b3ec5ec`と、依存更新を含む`ff3ca8b`もCloudflare Pagesで成功した。トップ、旧URL `/rule/`、Pagefindの`C97`検索を最新本番ドメインで確認した。
 - 旧`docs/`にあるHTML 50件はすべて出力先に存在し、旧非HTML/XMLファイルもすべて存在することを照合した。新規のArchive routeを含め、出力HTML内のローカルhref/srcを検査し未解決参照は0件。
 - ブラウザでトップページ、Archive一覧とC97検索結果を確認。検索欄から記事・taxonomy・Archiveが検索できた。Nextraの標準テーマ切替（System / light / dark）を維持。
-- 視覚確認はCodex内ブラウザの狭い表示幅で行った。専用のPlaywright実行環境はなく、実機ブラウザでの複数幅・hydration console検査は未実施。
+- Chromeのデバイスツールバーで320pxと390px幅を確認。ページ全体の横はみ出しはなく、「このサイトについて」の見出し表示とC97検索が動作し、DevTools consoleにメッセージはなかった。実機スマートフォンと他ブラウザでの確認は未実施。Playwright実行を試みたが、sandbox内でChromiumの起動がOS権限エラーになった。
 
-### 残作業
+### 残作業（2026-10-19時点）
 
-1. 本番の画面幅・hydration/consoleを複数の実機・ブラウザで確認する。
-2. `docs/`内の追加HTMLや画像が必要か調査し、旧URL一覧との差分を精査する。
-3. `docs.t98.info`を廃止する場合は、その参照先やDNS/CloudFront設定を別途確認する。
+1. 実機スマートフォンと複数ブラウザで、画面幅・hydration・consoleを確認する。Chromeのデバイスツールバーでは320px・390px幅を確認済み。
+2. Cloudflare Pagesプロジェクトのロールバック資産は保持中。Git連携は未接続、`*.doc-t98-info.pages.dev` と `doc-t98-info.pages.dev` はCloudflare Accessで制限、`doc.t98.info`のPagesドメイン紐付けは非アクティブのまま残している。安定期間後に削除するか判断する。
+
+旧`docs/`のHTML・静的ファイルは新しい出力先との存在確認を完了し、内部href/srcの未解決参照は0件。`docs.t98.info`はDNSレコードと転送ルールを削除済みで、PoCリポジトリもPrivateアーカイブ済み。
 
 ## 初期調査の未確定事項
 
@@ -176,4 +179,4 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 4. 内部リンク・外部リンク・画像参照を全ファイルから抽出し、移行後の検査一覧にする。
 5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とpostbuild scriptでCLI実行を確認した。
 
-本記録には調査、実装、previewとproduction切替の確認結果を記載した。GitHub Pagesは無効。Cloudflare Pagesの`master`でNextra版を配信中で、`doc.t98.info`のDNS設定は変更していない。Hugo原文と旧生成サイトは比較・復旧用に残している。
+本記録は移行履歴と検証結果をまとめたもの。最終的な本番配信先はGitHub Pagesで、GitHub Actionsから`master`の変更をデプロイする。変更はfeature branchとpull request経由で行う。Cloudflare Pagesは`doc-t98-info`プロジェクトと既存デプロイをロールバック用に保持し、Git連携を切断している。Hugo原文と旧生成サイトはリポジトリ内の比較・復旧用資料として残している。
