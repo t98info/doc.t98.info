@@ -49,9 +49,24 @@ export default async function Page(props) {
   const { default: MDXContent, toc, metadata, title } = await importPage(mdxPath)
   const Wrapper = getMDXComponents().wrapper
   const isArticle = mdxPath.length === 1 && articleSlugs.has(mdxPath[0])
+  const hasPageHeading = toc?.some((item) => item.depth === 1)
+  const pageTitle = metadata.title ?? title
 
   return (
     <Wrapper toc={toc} metadata={metadata} title={title}>
+      {!hasPageHeading && pageTitle && (
+        <h1
+          style={{
+            fontSize: '2.25rem',
+            fontWeight: 700,
+            letterSpacing: '-0.025em',
+            lineHeight: 1.2,
+            marginBlock: '0.5rem 1rem'
+          }}
+        >
+          {pageTitle}
+        </h1>
+      )}
       {isArticle && <ArticleMetadata metadata={metadata} />}
       <MDXContent {...props} params={params} />
     </Wrapper>
