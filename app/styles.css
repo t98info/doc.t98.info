@@ -78,9 +78,6 @@
   display: block;
   width: 220px;
   height: auto;
-  padding: 0.3rem 0.45rem;
-  border-radius: 0.4rem;
-  background: #25252b;
 }
 
 .site-navbar-links {
@@ -102,7 +99,6 @@
   .site-logo {
     width: 176px;
     max-width: calc(100vw - 9rem);
-    padding: 0.2rem 0.3rem;
   }
 
   .site-navbar-links {
