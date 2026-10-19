@@ -13,13 +13,22 @@ GitHub上の両リポジトリの`master`を参照して調査した。現在の
 
 | 対象 | 確認結果 |
 | --- | --- |
-| 移行元 | Hugo構成。ツリーは136ファイル。`content/`のMarkdownは20件、公開用`docs/`にはHTML、RSS/XML、sitemap、静的アセットがある。 |
+| 移行元 | Hugo構成。ツリーは136ファイル。`content/`のMarkdownは20件、追跡済み`docs/`は91ファイル（HTML 50件、XML 26件、画像・CSS・JS・SVG・M3U・CNAME等）。 |
 | コンテンツ | 固定ページ、2017〜2022年のお知らせ、記事のfront matter、tags/categoriesを確認。記事本文の修正は行わない。 |
 | Hugo設定 | `config.toml`で`baseURL=https://doc.t98.info/`、`:filename/` permalink、`tags`と`categories` taxonomy、unsafe raw HTML、TOCレベル2〜6を設定。 |
-| テーマ・shortcode | Git submodule `minimal-bootstrap-hugo-theme`。独自Flickr shortcodeと外部リンク用render-link hookがある。テーマの実体は移行元ツリーのsubmodule参照先で別途確認が必要。 |
+| テーマ・shortcode | Git submodule `minimal-bootstrap-hugo-theme`。独自Flickr shortcodeと外部リンク用render-link hookがある。指定submodule SHA `ed0f2e772ad9c55c6b321c7ccfceef646ae6464f`はremoteから取得できず、実際の固定テーマ状態は未確認。 |
 | PoC | Next.js 15、Nextra 4、React 19、`output: 'export'`、`images.unoptimized`。Pagefindはpostbuildで`.next/server/app`を走査し、`out/_pagefind`へ出力する設定。 |
 | PoC UI | `app/layout.jsx`でNextra docsのNavbar、Sidebar/Layout、右側TOC、Search、Footer、Banner、feedbackを設定。サイト名・Repository URL・Banner・feedbackはPoC固有のため本番向け調整対象。 |
 | 参照制約 | PoCの`content/`はサンプルのindexとcospicのみで、移行元コンテンツの変換例はない。PoCの`_meta.js`はindexを隠す設定。 |
+
+ソースの実ファイル確認で追加判明した点:
+
+- Hugoの親checkoutは作成できたが、submodule指定SHAがtheme remoteに存在せず`git submodule update`は失敗。別checkoutしたthemeの公開HEADは`e5649966`で、これは指定された固定バージョンと同一とは確認できない。
+- `config.toml`の`publishDir`は`docs`だが、`deploy.sh`はビルド後に`public`へ移動する。追跡済み`docs/`が配信成果物かどうかを含め、現在のデプロイ手順と一致するか確認が必要。
+- Hugoテーマの`baseof.html`と現行の出力HTMLは`<html lang="en">`。日本語サイト向けの`ja`へ変更する対象。
+- `layouts/partials/head.html`は`/site.webmanifest`と`/safari-pinned-tab.svg`を参照するが、移行元`static/`にも出力`docs/`にもファイルがない。参照切れ候補。
+- 出力HTMLにcanonical linkは見つからなかった。移行後は`https://doc.t98.info/`を基準に設定する。
+- `content/post/2019/c97-501.md`と`c97-502.md`は`draft: true`だが、追跡済み`docs/`にはHTMLがある。現状の公開出力は現在のMarkdown状態と一致しない可能性がある。
 
 ### Markdownファイル・URL対応の初期案
 
@@ -61,6 +70,8 @@ Hugoの`:filename/` permalinkと公開済み`docs/`を基準に旧URLを記録�
 - RSS/XML: `/index.xml`、`/post/index.xml`、tag/categoryの各`index.xml`、`/sitemap.xml`。RSSメニューを含め移行後の必要性と提供方法を決める。
 - CNAME: `doc.t98.info`。ドメイン切替時も維持対象。
 
+`docs/`の91ファイルは、HTML 50件、XML 26件、その他の静的ファイル15件。HTML 50件は、Markdown由来20 route（404 route含む）、`/404.html`、`/`、旧slug重複2件、standaloneページ2件、taxonomy 23件、`/post/`一覧1件で構成される。XML 26件はtaxonomy 23件、トップRSS、post RSS、sitemap。出力URLはこの構成を基準に全件照合する。
+
 追加ページの照合結果:
 
 | 旧URL | 既存コンテンツとの関係 | 移行時の対応 |
@@ -81,11 +92,13 @@ Hugoの`:filename/` permalinkと公開済み`docs/`を基準に旧URLを記録�
 | 項目 | 確認内容 | 対応メモ |
 | --- | --- | --- |
 | Front matter | title/date/draftに加え、記事でtags/categoriesを使用。確認した20件に`aliases`はない。 | metadataへ機械的に写し、`draft: true`の扱いは公開済み出力と照合する。 |
-| Hugo shortcode | `content/post/2019/c97-502.md`にTweet shortcode。Flickr shortcode定義は`layouts/shortcodes/flickr.html`。 | Tweet内容の代替表示、Flickr embedの実際の使用箇所・スクリプトを個別確認する。 |
+| Hugo shortcode | `content/post/2019/c97-502.md`にTweet shortcode、`content/post/2020/report-comike-shinagawa.md`にYouTube shortcode。独自Flickr shortcode定義はあるが、Markdown本文に呼び出しは見つからない。Flickr記事はraw HTML embedを9件含む。 | Tweet/YouTubeの表示方法、Flickr embedのscript読込を個別に移行する。 |
 | Raw HTML | Hugo unsafe設定有効。`report-comike-shinagawa.md`に複数のFlickr用`<a>`/`<img>`埋め込み。 | MDX構文で有効な形に調整。意味・本文を変更しない。 |
 | Markdown拡張 | definition list、footnote、linkify、strikethrough、table、task list、typographer、heading attributes、TOCを有効化。 | Nextra/MDXでの互換状況を変換前に確認する。 |
 | リンク・画像 | 外部画像が複数のホストにある。C99記事には相対`.svg`、C98記事には`http://ex.t98.info/...`画像あり。 | 既存URLと画像の所在を照合し、HTTPS・ローカル移管を決める。リンクの機械検査対象にする。 |
 | `aliases` | 現行Markdown front matterに検出なし。 | 公開済みHTML、sitemap、外部リンクは別に調査し、MDだけでURL一覧を作らない。 |
+| 追加front matter | `actor`を`c97-501.md`と`c97-502.md`が持つ。後者の値はMarkdownリンク形式。 | 旧テーマでの表示箇所を確認し、本文表現を保つ形で扱いを決める。 |
+| 外部参照 | 本文リンク・画像は11 hostに分散。`ex.t98.info`、`t98info.minibird.jp`、`i.imgur.com`、`img.t98.info`、Flickr、Twitter、Comiket、Google、GitHub等。 | URL・画像参照を移行時のリンク検査対象にする。C98のHTTP画像と相対SVG 5件を個別確認する。 |
 
 ### UI・実装参照元の確認
 
