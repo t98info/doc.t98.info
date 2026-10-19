@@ -111,7 +111,7 @@ PoCの現行ファイルは次の通り。
 | `git clone` | 成功。ローカルMacに設定済みのgit認証を使い、`/private/tmp/doc-t98-info-migration`へcloneした。 |
 | `git fetch origin` | 成功。remoteを確認し、`migrate/nextra`はまだ存在しない。 |
 | `master`のHEAD | `175bcc47b821fc934d1eeffa44d2d8ffa2c0b6a4`。 |
-| `migrate/nextra` | ローカルブランチを作成し、この調査記録を追加してpushする。 |
+| `migrate/nextra` | ローカルブランチを作成し、調査記録をcommit `6681c0f`としてpush済み。 |
 | `master`への変更 | なし。 |
 | 作業環境 | 作業checkoutは`/private/tmp/doc-t98-info-migration`。会話のworkspace側には`plan.md`と調査記録を置いている。 |
 
