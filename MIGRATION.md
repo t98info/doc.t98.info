@@ -132,7 +132,7 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 
 ## Phase 3〜10: Nextra移行実装と検証
 
-`migrate/nextra`上で、Nextra静的サイトをCloudflare Pages向けに整えた。Hugoの原本は削除せず`hugo-legacy/content/`へ移し、元の`config.toml`とlayoutsを検証用に残している。Cloudflareのclone時に取得不能なtheme gitlink SHAがエラーになったため、移行ブランチから`.gitmodules`とtheme gitlinkを除去した。元記事・Hugo設定・生成済み`docs/`は保持している。
+`migrate/nextra`上でNextra静的サイトをCloudflare Pages向けに整えた。Hugo記事原文は`hugo-legacy/content/`、旧生成サイトは`docs/`に比較・復旧用として保持した。Cloudflare clone時に取得不能なtheme gitlink SHAがエラーになったため、`.gitmodules`とtheme gitlinkは移行ブランチから除去した。本番切替後にHugo専用の`config.toml`、layouts、archetypes、deploy script、build lockを削除した。
 
 - Next.js 15 / Nextra 4 / React 19のPoC構成を移植し、`output: 'export'`と`trailingSlash: true`を設定。既存Cloudflare Pages projectにはcustom domain `doc.t98.info`が紐付いている。
 - 14記事は旧slugのまま`content/<slug>.mdx`に置き、通常ナビゲーションから隠した。`/archive/`に年別一覧を作り、Pagefind対象には全記事を含めている。Nextraでは実ファイルをrootに置かないとslug routeを維持できないため、`content/archive/`には一覧ページだけを配置した。
@@ -144,11 +144,11 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 
 ### Cloudflare Pagesの現状と切替
 
-GitHubリポジトリのSettings → Pagesは無効。Cloudflare Dashboardでは既存のPagesプロジェクト`doc-t98-info`を確認した。`t98info/doc.t98.info`に接続され、本番branchは`master`、custom domainは`doc.t98.info`と`doc-t98-info.pages.dev`。自動デプロイは有効で、確認時点のproduction deploymentは約2年前のHugo commit `faf40d1`だった。
+GitHubリポジトリのSettings → Pagesは無効。Cloudflare Dashboardでは既存のPagesプロジェクト`doc-t98-info`を確認した。`t98info/doc.t98.info`に接続され、本番branchは`master`、custom domainは`doc.t98.info`と`doc-t98-info.pages.dev`。自動デプロイは有効で、本番切替前のdeploymentはHugo commit `faf40d1`だった。
 
 Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`があるものの、これらだけでは実際にPagesで配信中とは言えない。さらに`deploy.sh`はHugo出力後に`public/`へ移動し、`master8`としてpushする手順で、`publishDir = "docs"`とも一致していない。
 
-既存Cloudflare Pages projectの設定はbuild command未設定、output directoryが`docs`だった。移行ブランチのpreview buildは、Cloudflareがclone時に取得できないHugo theme gitlink SHA `ed0f2e772ad9c55c6b321c7ccfceef646ae6464f`をfetchしようとして失敗していた。このgitlinkを移行ブランチから除き、Cloudflare Pagesの公式Next.js Static Export設定に合わせてbuild commandを`npm run build`、出力先を`out/`とした。`npm run build`はpostbuildで検索indexとlegacy aliasも出力する。Node.js 22は`.nvmrc`に固定した。production branch、custom domain、DNSは変更していない。
+既存Cloudflare Pages projectの設定はbuild command未設定、output directoryが`docs`だった。移行ブランチのpreview buildは、Cloudflareがclone時に取得できないHugo theme gitlink SHA `ed0f2e772ad9c55c6b321c7ccfceef646ae6464f`をfetchしようとして失敗していた。このgitlinkを除き、build commandを`npm run build`、出力先を`out/`へ変更した。`npm run build`はpostbuildで検索indexとlegacy aliasも出力する。Node.js 22は`.nvmrc`に固定した。production branchは`master`を維持し、既に紐付いていたcustom domainとDNSは変更せずにNextraへ切り替えた。
 
 ### 確認結果
 
@@ -156,14 +156,16 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 - `npm run build`成功。Next.jsが50 routeを静的生成し、Pagefindが日本語indexに46ページ・1,772語を登録した。
 - Cloudflare Pages preview deployment `8324964` がclone・build・deployに成功。公開URLは<https://migrate-nextra.doc-t98-info.pages.dev/>。トップ、旧URL `/rule/`、検索語`C97`の結果をブラウザで確認した。
 - Nextraの右側目次、最終更新表示、テーマ選択を日本語化し、PoC既定の英語feedbackリンクを削除した。更新済みpreviewで日本語ラベル、feedback非表示、ライト/ダーク切替を確認した。
+- `master`のproduction deploymentが成功し、`https://doc.t98.info/`へNextra版が公開された。トップ、旧URL `/rule/`、Pagefindの`C97`検索を本番ドメインで確認した。
 - 旧`docs/`にあるHTML 50件はすべて出力先に存在し、旧非HTML/XMLファイルもすべて存在することを照合した。新規のArchive routeを含め、出力HTML内のローカルhref/srcを検査し未解決参照は0件。
 - ブラウザでトップページ、Archive一覧とC97検索結果を確認。検索欄から記事・taxonomy・Archiveが検索できた。Nextraの標準テーマ切替（System / light / dark）を維持。
 - 視覚確認はCodex内ブラウザの狭い表示幅で行った。専用のPlaywright実行環境はなく、実機ブラウザでの複数幅・hydration console検査は未実施。
 
 ### 残作業
 
-1. `master`へ統合後、Cloudflare production deploymentと`doc.t98.info`で公開状態を確認する。
-2. 安定稼働を確認した後、ロールバック要件に応じて旧Hugo資産を整理する。
+1. 本番の画面幅・hydration/consoleを複数の実機・ブラウザで確認する。
+2. `docs/`内の追加HTMLや画像が必要か調査し、旧URL一覧との差分を精査する。
+3. `docs.t98.info`を廃止する場合は、その参照先やDNS/CloudFront設定を別途確認する。
 
 ## 初期調査の未確定事項
 
@@ -173,4 +175,4 @@ Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`が�
 4. 内部リンク・外部リンク・画像参照を全ファイルから抽出し、移行後の検査一覧にする。
 5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とpostbuild scriptでCLI実行を確認した。
 
-本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesは無効で、Cloudflare Pages projectとcustom domainが設定済みであることを確認した。production branchの変更、DNS切替、masterへの統合は未実施。
+本記録には調査、実装、previewとproduction切替の確認結果を記載した。GitHub Pagesは無効。Cloudflare Pagesの`master`でNextra版を配信中で、`doc.t98.info`のDNS設定は変更していない。Hugo原文と旧生成サイトは比較・復旧用に残している。
