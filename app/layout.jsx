@@ -35,12 +35,24 @@ export const metadata = {
 }
 
 const navbar = (
-  <Navbar logo={<b>ほむりんルーム総合インフォ</b>}>
-    <a href="/archive/">過去のお知らせ</a>
-    <a href="/tags/">タグ</a>
-    <a href="/categories/">カテゴリ</a>
-    <a href="/about/">このサイトについて</a>
-    <a href="/index.xml">RSS</a>
+  <Navbar
+    logo={
+      <img
+        className="site-logo"
+        src="/title-logo.png"
+        alt="ほむりんルーム総合インフォ"
+        width="320"
+        height="60"
+      />
+    }
+  >
+    <div className="site-navbar-links" aria-label="サイトメニュー">
+      <a href="/archive/">過去のお知らせ</a>
+      <a href="/tags/">タグ</a>
+      <a href="/categories/">カテゴリ</a>
+      <a href="/about/">このサイトについて</a>
+      <a href="/index.xml">RSS</a>
+    </div>
   </Navbar>
 )
 const search = (
