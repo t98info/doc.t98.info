@@ -5,6 +5,7 @@ import 'nextra-theme-docs/style.css'
 import './styles.css'
 
 const siteUrl = 'https://doc.t98.info'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,7 +40,7 @@ const navbar = (
     logo={
       <img
         className="site-logo"
-        src="/title-logo.png"
+        src={`${basePath}/title-logo.png`}
         alt="ほむりんルーム総合インフォ"
         width="320"
         height="60"
@@ -47,11 +48,11 @@ const navbar = (
     }
   >
     <div className="site-navbar-links" aria-label="サイトメニュー">
-      <a href="/archive/">過去のお知らせ</a>
-      <a href="/tags/">タグ</a>
-      <a href="/categories/">カテゴリ</a>
-      <a href="/about/">このサイトについて</a>
-      <a href="/index.xml">RSS</a>
+      <a href={`${basePath}/archive/`}>過去のお知らせ</a>
+      <a href={`${basePath}/tags/`}>タグ</a>
+      <a href={`${basePath}/categories/`}>カテゴリ</a>
+      <a href={`${basePath}/about/`}>このサイトについて</a>
+      <a href={`${basePath}/index.xml`}>RSS</a>
     </div>
   </Navbar>
 )
