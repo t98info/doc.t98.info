@@ -43,20 +43,20 @@ Hugoの`:filename/` permalinkと公開済み`docs/`を基準に旧URLを記録�
 | `content/del-guide.md` | `/del-guide/` | `content/del-guide.mdx` | `/del-guide/` | 削除ガイドライン。本文の意味・表現を変更しない。 |
 | `content/policy.md` | `/policy/` | `content/policy.mdx` | `/policy/` | プライバシーポリシー。本文の意味・表現を変更しない。 |
 | `content/rule.md` | `/rule/` | `content/rule.mdx` | `/rule/` | 利用規約。本文の意味・表現を変更しない。内部リンク`/policy/`も維持。 |
-| `content/post/2017/wcbbs-info20170316.md` | `/wcbbs-info20170316/` | `content/archive/wcbbs-info20170316.mdx` | `/wcbbs-info20170316/` | front matterのdate/category/tagを変換。 |
-| `content/post/2017/wcbbs-info20170607.md` | `/wcbbs-info20170607/` | `content/archive/wcbbs-info20170607.mdx` | `/wcbbs-info20170607/` | front matterのdate/category/tagを変換。 |
-| `content/post/2018/wcbbs-info20180221.md` | `/wcbbs-info20180221/` | `content/archive/wcbbs-info20180221.mdx` | `/wcbbs-info20180221/` | front matterと外部画像を変換。 |
-| `content/post/2019/1904_dai-syasai.md` | `/1904_dai-syasai/` | `content/archive/1904_dai-syasai.mdx` | `/1904_dai-syasai/` | front matterと複数の外部画像URLを維持。 |
-| `content/post/2019/c97-001.md` | `/c97-001/` | `content/archive/c97-001.mdx` | `/c97-001/` | front matterと画像リンクを維持。 |
-| `content/post/2019/c97-501.md` | `/c97-501/` | `content/archive/c97-501.mdx` | `/c97-501/` | `draft: true`。ただし現行公開出力にページがあるためURL互換対象として要確認。 |
-| `content/post/2019/c97-502.md` | `/c97-502/` | `content/archive/c97-502.mdx` | `/c97-502/` | `draft: true`、Hugo `{{< tweet ... >}}` shortcode、画像あり。公開出力にページがあるため要確認。 |
-| `content/post/2019/end-homrin-bot.md` | `/end-homrin-bot/` | `content/archive/end-homrin-bot.mdx` | `/end-homrin-bot/` | front matterを変換。 |
-| `content/post/2020/20021601.md` | `/20021601/` | `content/archive/20021601.mdx` | `/20021601/` | front matterを変換。 |
-| `content/post/2020/c98-001.md` | `/c98-001/` | `content/archive/c98-001.mdx` | `/c98-001/` | 本文にHTTPの内部ドメイン画像を含む。HTTPS化・asset移管の要否を確認。 |
-| `content/post/2020/c98-002.md` | `/c98-002/` | `content/archive/c98-002.mdx` | `/c98-002/` | 本文にHTTPの内部ドメイン画像、外部リンクを含む。 |
-| `content/post/2020/report-comike-shinagawa.md` | `/report-comike-shinagawa/` | `content/archive/report-comike-shinagawa.mdx` | `/report-comike-shinagawa/` | 多数のraw HTML Flickr embedあり。表示とスクリプト読込方法を移行検討。 |
-| `content/post/2021/c99-001.md` | `/c99-001/` | `content/archive/c99-001.mdx` | `/c99-001/` | 相対SVG画像`./c99-*.svg`が本文にある。元ファイルの所在・公開URLを調査して同じURLで配信する。 |
-| `content/post/2022/0118234101.md` | `/0118234101/` | `content/archive/0118234101.mdx` | `/0118234101/` | front matterを変換。 |
+| `content/post/2017/wcbbs-info20170316.md` | `/wcbbs-info20170316/` | `content/wcbbs-info20170316.mdx` | `/wcbbs-info20170316/` | front matterのdate/category/tagを変換。 |
+| `content/post/2017/wcbbs-info20170607.md` | `/wcbbs-info20170607/` | `content/wcbbs-info20170607.mdx` | `/wcbbs-info20170607/` | front matterのdate/category/tagを変換。 |
+| `content/post/2018/wcbbs-info20180221.md` | `/wcbbs-info20180221/` | `content/wcbbs-info20180221.mdx` | `/wcbbs-info20180221/` | front matterと外部画像を変換。 |
+| `content/post/2019/1904_dai-syasai.md` | `/1904_dai-syasai/` | `content/1904_dai-syasai.mdx` | `/1904_dai-syasai/` | front matterと複数の外部画像URLを維持。 |
+| `content/post/2019/c97-001.md` | `/c97-001/` | `content/c97-001.mdx` | `/c97-001/` | front matterと画像リンクを維持。 |
+| `content/post/2019/c97-501.md` | `/c97-501/` | `content/c97-501.mdx` | `/c97-501/` | `draft: true`。ただし現行公開出力にページがあるためURL互換対象として要確認。 |
+| `content/post/2019/c97-502.md` | `/c97-502/` | `content/c97-502.mdx` | `/c97-502/` | `draft: true`、Hugo `{{< tweet ... >}}` shortcode、画像あり。公開出力にページがあるため要確認。 |
+| `content/post/2019/end-homrin-bot.md` | `/end-homrin-bot/` | `content/end-homrin-bot.mdx` | `/end-homrin-bot/` | front matterを変換。 |
+| `content/post/2020/20021601.md` | `/20021601/` | `content/20021601.mdx` | `/20021601/` | front matterを変換。 |
+| `content/post/2020/c98-001.md` | `/c98-001/` | `content/c98-001.mdx` | `/c98-001/` | 本文にHTTPの内部ドメイン画像を含む。HTTPS化・asset移管の要否を確認。 |
+| `content/post/2020/c98-002.md` | `/c98-002/` | `content/c98-002.mdx` | `/c98-002/` | 本文にHTTPの内部ドメイン画像、外部リンクを含む。 |
+| `content/post/2020/report-comike-shinagawa.md` | `/report-comike-shinagawa/` | `content/report-comike-shinagawa.mdx` | `/report-comike-shinagawa/` | 多数のraw HTML Flickr embedあり。表示とスクリプト読込方法を移行検討。 |
+| `content/post/2021/c99-001.md` | `/c99-001/` | `content/c99-001.mdx` | `/c99-001/` | 相対SVG画像`./c99-*.svg`が本文にある。元ファイルの所在・公開URLを調査して同じURLで配信する。 |
+| `content/post/2022/0118234101.md` | `/0118234101/` | `content/0118234101.mdx` | `/0118234101/` | front matterを変換。 |
 
 `content/archive/`は情報設計の案であり、Nextraでファイルを移すだけでは記事の既存URLは保証されない。静的Export上のroute生成または互換用ページを実装し、出力URL一覧で検証する。
 
@@ -130,7 +130,38 @@ PoCの現行ファイルは次の通り。
 
 Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`master`は変更しない。
 
-## 次の調査で確定すること
+## Phase 3〜10: Nextra移行実装と検証
+
+`migrate/nextra`上で、Nextra静的サイトとGitHub Pages向けGitHub Actions workflowを実装した。Hugoの原本は削除せず`hugo-legacy/content/`へ移し、元の`config.toml`、layouts、theme gitlink等も検証完了まで残している。
+
+- Next.js 15 / Nextra 4 / React 19のPoC構成を移植し、`output: 'export'`と`trailingSlash: true`を設定。`public/CNAME`は`doc.t98.info`を維持する。
+- 14記事は旧slugのまま`content/<slug>.mdx`に置き、通常ナビゲーションから隠した。`/archive/`に年別一覧を作り、Pagefind対象には全記事を含めている。Nextraでは実ファイルをrootに置かないとslug routeを維持できないため、`content/archive/`には一覧ページだけを配置した。
+- 固定ページ、tags/categories一覧・各項目、`/post/`一覧、`/404/`を作成。`/021601/`と`/5661384/`は対応する現行記事HTMLをコピーする生成処理を追加した。`/kL5KtNRy7eWsoITdNA00DNbnF/`、`/aacp_96.html`、`/aacp_96.m3u`、各RSS XML、既存の静的ファイルも引き継いだ。古い`sitemap.xml`はNext.js生成物へ置き換える。
+- Hugoのtweet/YouTube shortcodeをMDX componentへ変換し、Flickr埋め込み用client component、C99 SVGパス、taxonomy URL、大文字小文字、メタデータを整えた。利用規約・ポリシー・削除ガイド等の本文は校正せず移行した。
+- 日本語UI、metadata/canonical/OGP、`robots.txt`、`sitemap.xml`、Pagefind日本語index、`.nojekyll`を設定。ナビゲーションにはArchive、Tags、Categories、About、RSSを追加した。
+- `.github/workflows/nextjs.yml`は`master` pushと手動実行を契機にビルドし、GitHub Pages artifactをActionsからデプロイする。移行ブランチへのpushでは本番デプロイしない。
+
+### GitHub Pagesの現状と切替
+
+作業開始時のGitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`がある。したがって、従来はGitHub Pagesの`master`ブランチ`/docs`を公開元としていた可能性が高い。ただし実際のPages設定はGitHubリポジトリ設定にあり、git cloneだけでは確認できない。さらに`deploy.sh`はHugo出力後に`public/`へ移動しており、`publishDir = "docs"`と食い違っている。
+
+新workflowはGitHub Pagesの公開元が **GitHub Actions** に設定されていることを前提とする。リポジトリ設定はGit経由で読めないため、現設定は未確認。本番切替時にはActionsのworkflowを`master`へ反映した後、Settings → Pages → Build and deployment → Sourceを「GitHub Actions」に変更し、Pages deploymentの成功を確認する必要がある。設定変更とmasterへの反映はこの作業では行っていない。
+
+### 確認結果
+
+- `npm ci`成功。PoC由来のReact 19と`@theguild/remark-mermaid`のReact 18 peer warning、npm auditの脆弱性件数が出たため、依存更新は別途判断が必要。
+- `npm run build`成功。Next.jsが50 routeを静的生成し、Pagefindが日本語indexに46ページ・1,772語を登録した。
+- 旧`docs/`にあるHTML 50件はすべて出力先に存在し、旧非HTML/XMLファイルもすべて存在することを照合した。新規のArchive routeを含め、出力HTML内のローカルhref/srcを検査し未解決参照は0件。
+- ブラウザでトップページ、Archive一覧とC97検索結果を確認。検索欄から記事・taxonomy・Archiveが検索できた。Nextraの標準テーマ切替（System / light / dark）を維持。
+- 視覚確認はCodex内ブラウザの狭い表示幅で行った。専用のPlaywright実行環境はなく、実機ブラウザでの複数幅・hydration console検査は未実施。
+
+### 残作業
+
+1. GitHub Pagesの現在のSource設定とcustom domain設定を確認する。ローカルgitのみでは設定値を取得できない。
+2. 本番切替時にGitHub Settings → PagesのSourceをActionsへ変更し、`master`にworkflowが入った後のdeploymentを確認する。
+3. 移行ブランチをレビューし、承認後にmasterへ統合する。本作業ではmaster、公開設定、live deploymentを変更していない。
+
+## 初期調査の未確定事項
 
 1. `docs/`内の追加HTML・画像・SVG・添付ファイルと各Markdownの対応関係、必要な旧URLの全リスト。
 2. `docs/`内のHTMLと現在のMarkdownの差（draft記事、生成時期、ソース不在ページの特定）。
@@ -138,4 +169,4 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 4. 内部リンク・外部リンク・画像参照を全ファイルから抽出し、移行後の検査一覧にする。
 5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とworkflowでCLI実行を確認した。
 
-本記録はPhase 1の初期調査であり、上記の確定後にURL対応表を完成させる。Phase 3以降の実装は行っていない。
+本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesのリポジトリ設定確認と本番切替は未実施。
