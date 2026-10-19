@@ -143,9 +143,11 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 
 ### GitHub Pagesの現状と切替
 
-作業開始時のGitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`がある。したがって、従来はGitHub Pagesの`master`ブランチ`/docs`を公開元としていた可能性が高い。ただし実際のPages設定はGitHubリポジトリ設定にあり、git cloneだけでは確認できない。さらに`deploy.sh`はHugo出力後に`public/`へ移動しており、`publishDir = "docs"`と食い違っている。
+GitHubリポジトリのSettings → Pagesを読み取りで確認したところ、Sourceは「Deploy from a branch」、branchは「None」で、「GitHub Pages is currently disabled」と表示された。つまり現時点でこのリポジトリのGitHub Pagesは無効。`https://doc.t98.info/`には旧Hugoサイトが表示されているため、現在はGitHub Pages以外の経路で公開されている。正確な現行ホスティング事業者はまだ確認していない。
 
-新workflowはGitHub Pagesの公開元が **GitHub Actions** に設定されていることを前提とする。リポジトリ設定はGit経由で読めないため、現設定は未確認。本番切替時にはActionsのworkflowを`master`へ反映した後、Settings → Pages → Build and deployment → Sourceを「GitHub Actions」に変更し、Pages deploymentの成功を確認する必要がある。設定変更とmasterへの反映はこの作業では行っていない。
+Gitツリーには`docs/CNAME`の`doc.t98.info`とHugo `publishDir = "docs"`があるものの、これらだけでは実際にPagesで配信中とは言えない。さらに`deploy.sh`はHugo出力後に`public/`へ移動し、`master8`としてpushする手順で、`publishDir = "docs"`とも一致していない。
+
+新workflowはGitHub Pagesの公開元が **GitHub Actions** に設定されていることを前提とする。現在はPages自体が無効なので、workflowを`master`へ反映した後にSettings → Pages → Build and deployment → Sourceを「GitHub Actions」に変更し、Pages deploymentとcustom domainの状態を確認する必要がある。設定変更とmasterへの反映はこの作業では行っていない。
 
 ### 確認結果
 
@@ -157,8 +159,8 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 
 ### 残作業
 
-1. GitHub Pagesの現在のSource設定とcustom domain設定を確認する。ローカルgitのみでは設定値を取得できない。
-2. 本番切替時にGitHub Settings → PagesのSourceをActionsへ変更し、`master`にworkflowが入った後のdeploymentを確認する。
+1. 現在の旧Hugo公開経路とDNS/custom domainの切替手順を確認する。GitHub Pagesは現在無効。
+2. 本番切替時にGitHub Settings → PagesのSourceをActionsへ変更し、`master`にworkflowが入った後のdeploymentとcustom domainを確認する。
 3. 移行ブランチをレビューし、承認後にmasterへ統合する。本作業ではmaster、公開設定、live deploymentを変更していない。
 
 ## 初期調査の未確定事項
@@ -169,4 +171,4 @@ Phase 1の追加調査と以後の変更は`migrate/nextra`上で行う。`maste
 4. 内部リンク・外部リンク・画像参照を全ファイルから抽出し、移行後の検査一覧にする。
 5. Pagefind対象と日本語検索の確認方法。PoCのファイルツリーにはPagefind専用UIやその設定ファイルはなく、`package.json`とworkflowでCLI実行を確認した。
 
-本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesのリポジトリ設定確認と本番切替は未実施。
+本記録にはPhase 1の初期調査とPhase 3〜10の実装・検証結果を記載した。GitHub Pagesの設定確認は読み取りのみ実施し、Pages有効化、本番切替、masterへの統合は未実施。
