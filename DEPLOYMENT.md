@@ -22,4 +22,4 @@ After the first Pages deployment, add `doc.t98.info` under the project's **Custo
 
 Keep `master` as the production branch while `migrate/nextra` is under review. Cloudflare Pages Git integration can publish non-production branches as preview deployments. Promote this branch only after the static build, URLs, and custom domain have been reviewed.
 
-The Cloudflare Pages project and domain are account-level settings and are not stored in this repository. Create or connect the project in Cloudflare Dashboard → Workers & Pages; no Cloudflare credentials are required in this repository for Git integration.
+The existing Cloudflare Pages project is `doc-t98-info`, connected to this repository with `master` as the production branch. Its build command and output directory are set to `npm run build` and `out`. The `doc.t98.info` custom domain remains attached. No Cloudflare credentials are required in this repository for Git integration.
