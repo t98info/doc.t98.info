@@ -1,4 +1,4 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
@@ -52,6 +52,7 @@ const search = (
   />
 )
 const footer = <Footer>&copy; ほむりんルームグループ</Footer>
+const lastUpdated = <LastUpdated locale="ja-JP">最終更新日</LastUpdated>
 
 export default async function RootLayout({ children }) {
   return (
@@ -63,7 +64,11 @@ export default async function RootLayout({ children }) {
           pageMap={await getPageMap()}
           footer={footer}
           editLink={null}
+          feedback={{ content: null }}
+          lastUpdated={lastUpdated}
           search={search}
+          themeSwitch={{ dark: 'ダーク', light: 'ライト', system: 'システム' }}
+          toc={{ title: 'このページの目次', backToTop: 'トップへ戻る' }}
         >
           {children}
         </Layout>
